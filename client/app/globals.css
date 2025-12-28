@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  /* User Reference Palette: https://colorhunt.co/palette/feeac9ffcdc9fdacacfd7979 */
+
+  --background: #FEEAC9;
+  /* Cream/Warm Yellow - Main Background */
+  --foreground: #4A3B32;
+  /* Dark Warm Brown for contrast against warm bg */
+
+  /* Custom Theme Colors */
+  --primary: #FD7979;
+  /* Vibrant Coral */
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #FDACAC;
+  /* Soft Salmon */
+  --secondary-foreground: #4A3B32;
+
+  --card: #FFFFFF;
+  /* Keeping cards white for structure/contrast on colored bg */
+  --card-foreground: #4A3B32;
+
+  --muted: #FFCDC9;
+  /* Pastel Pink */
+  --muted-foreground: #8A6A64;
+
+  --accent: #FFCDC9;
+  /* Pastel Pink */
+  --accent-foreground: #4A3B32;
+
+  --border: #FDACAC;
+  /* Soft Salmon Border */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Warm Dark Mode */
+    --background: #2D2A26;
+    /* Dark Warm Grey */
+    --foreground: #E0DED8;
+    /* Off-White Text */
+
+    --primary: #E76F51;
+    --primary-foreground: #FFFFFF;
+
+    --secondary: #D4A373;
+    --secondary-foreground: #FFFFFF;
+
+    --card: #38332E;
+    --card-foreground: #E0DED8;
+
+    --muted: #4A433E;
+    --muted-foreground: #A8A29D;
+
+    --accent: #E9C46A;
+    --accent-foreground: #2D2A26;
+
+    --border: #4A433E;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
