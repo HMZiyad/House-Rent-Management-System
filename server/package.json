@@ -4,8 +4,8 @@
   "description": "Backend for House Rental Management System",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node init && node index.js",
+    "dev": "node init && nodemon index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
